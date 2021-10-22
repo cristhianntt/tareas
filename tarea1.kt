@@ -26,7 +26,7 @@ fun normalizarNota(nota: Int): Int{
     var notaNormalizada = nota
 
     try{
-        if(!(nota in 0..20))	throw Exception("no está en el rango")
+        if(nota !in 0..20)	throw Exception("no está en el rango")
     }catch(e: Exception){
         notaNormalizada = if (nota < 0) 0	else 20
     }
